@@ -1,0 +1,34 @@
+svg {
+    width: 100%;
+    height: 100vh;
+    /* display: block; */
+    /* margin: 0 auto; */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#map-container {
+    text-align: center;
+}
+
+#info {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #000;
+    display: inline-block;
+    background: #fff;
+}
+
+#lot-map {
+    display: block;
+    margin: 0 auto;
+}
+
+.cls-1 {
+    fill: none;
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 0.5px;
+}
