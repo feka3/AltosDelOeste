@@ -26,9 +26,46 @@ body {
     margin: 0 auto;
 }
 
-.cls-1 {
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-4 {
+    font-family: CenturyGothic-Bold, 'Century Gothic';
+    font-size: 13.52px;
+    font-weight: 700;
+}
+
+.cls-1,
+.cls-5 {
+    fill: #f97316;
+}
+
+.cls-2,
+.cls-6 {
+    fill: #10b981;
+}
+
+.cls-3,
+.cls-7 {
+    fill: #9d174d;
+}
+
+.cls-8 {
+    fill: #fff;
+}
+
+.cls-4,
+.cls-9 {
+    fill: #eab308;
+}
+
+.cls-10 {
+    opacity: .21;
+}
+
+.cls-11 {
     fill: none;
-    stroke: #000;
+    stroke: #b3b3b3;
     stroke-miterlimit: 10;
-    stroke-width: 0.5px;
+    stroke-width: .5px;
 }
