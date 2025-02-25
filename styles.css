@@ -1,16 +1,144 @@
-svg {
-    width: 100%;
-    height: 100vh;
-    /* display: block; */
-    /* margin: 0 auto; */
-}
-
-body {
-    font-family: Arial, sans-serif;
-}
-
 #map-container {
+    width: 100%;
+    /* max-width: 00px; */
+    /* Adjust as needed */
+    margin: 0 auto;
     text-align: center;
+
+}
+
+#Capa_2 {
+    width: 100%;
+    height: auto;
+}
+
+
+.cls-1 {
+    letter-spacing: -.08em;
+}
+
+.cls-2,
+.cls-3,
+.cls-4,
+.cls-5 {
+    font-family: CenturyGothic-Bold, 'Century Gothic';
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.cls-2,
+.cls-6 {
+    fill: #f97316;
+}
+
+.cls-7 {
+    letter-spacing: 0em;
+}
+
+.cls-3,
+.cls-8 {
+    fill: #10b981;
+}
+
+.cls-9 {
+    fill: #b3b3b3;
+    font-family: MyriadPro-Regular, 'Myriad Pro';
+    font-size: 24px;
+}
+
+.cls-4,
+.cls-10 {
+    fill: #9d174d;
+}
+
+.cls-11 {
+    fill: #fff;
+}
+
+.cls-12 {
+    letter-spacing: -.01em;
+}
+
+.cls-13 {
+    letter-spacing: -.02em;
+}
+
+.cls-5,
+.cls-14 {
+    fill: #eab308;
+}
+
+.cls-15 {
+    opacity: .21;
+}
+
+.cls-16 {
+    stroke: #ccc;
+}
+
+.cls-16,
+.cls-17 {
+    fill: none;
+    stroke-miterlimit: 10;
+    stroke-width: .5px;
+
+}
+
+.cls-17 {
+    fill: transparent;
+    stroke: #b3b3b3;
+    stroke-miterlimit: 10;
+    stroke-width: .5px;
+}
+
+.cls-17:hover {
+    stroke: #000;
+    cursor: pointer;
+}
+
+/* Cambiar color de fondo del lote según estado */
+.cls-17.disponible {
+    fill: #ceecc1;
+}
+
+.cls-17.vendido {
+    fill: #f2dede;
+}
+
+.cls-17.reservado {
+    fill: #fff27e;
+}
+
+.cls-18 {
+    letter-spacing: 0em;
+}
+
+.cls-19 {
+    letter-spacing: 0em;
+}
+
+.cls-20 {
+    letter-spacing: 0em;
+}
+
+.cls-21 {
+    letter-spacing: 0em;
+}
+
+.cls-17 {
+    stroke: #b3b3b3;
+}
+
+.cls-22 {
+    letter-spacing: -.01em;
+}
+
+.cls-23 {
+    letter-spacing: 0em;
+}
+
+.cls-24 {
+    letter-spacing: -.03em;
 }
 
 .lote-info {
@@ -18,7 +146,7 @@ body {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* padding: 15px; */
+    padding: 15px;
     font-family: Arial, sans-serif;
     font-size: 14px;
     color: #333;
@@ -27,20 +155,6 @@ body {
     /* Oculto por defecto */
     border: 1px solid #ddd;
     max-width: 250px;
-}
-
-.lote-info h3 {
-    margin: 0 0 10px;
-    font-size: 18px;
-    color: #2c3e50;
-}
-
-.lote-info p {
-    margin: 5px 0;
-}
-
-.lote-info .estado {
-    font-weight: bold;
 }
 
 .disponible {
@@ -53,81 +167,4 @@ body {
 
 .reservado {
     color: #f39c12;
-}
-
-/* Cambiar color de fondo del lote según estado */
-.cls-11.disponible {
-    fill: #ceecc1;
-}
-
-.cls-11.vendido {
-    fill: #f2dede;
-}
-
-.cls-11.reservado {
-    fill: #fff27e;
-}
-
-#lot-map {
-    display: block;
-    margin: 0 auto;
-}
-
-
-/* SVG */
-
-.cls-1,
-.cls-2,
-.cls-3,
-.cls-4 {
-    font-family: CenturyGothic-Bold, 'Century Gothic';
-    font-size: 1.2em;
-    font-weight: 700;
-}
-
-
-.cls-1,
-.cls-5 {
-    fill: #f97316;
-}
-
-.cls-2,
-.cls-6 {
-    fill: #10b981;
-}
-
-.cls-3,
-.cls-7 {
-    fill: #9d174d;
-}
-
-.cls-8 {
-    fill: #fff;
-}
-
-.cls-4,
-.cls-9 {
-    fill: #c29308;
-}
-
-
-.cls-11 {
-    fill: transparent;
-    stroke: #b3b3b3;
-    stroke-miterlimit: 10;
-    stroke-width: .5px;
-}
-
-.cls-11:hover {
-    stroke: #000;
-    cursor: pointer;
-}
-
-.cls-street {
-    font-family: Arial, sans-serif;
-    font-size: 1em;
-    fill: #000;
-    font-weight: 700;
-    text-anchor: middle;
-    /* Centra el texto horizontalmente en x=369.25 */
 }

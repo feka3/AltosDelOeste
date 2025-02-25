@@ -44,8 +44,10 @@ const lotesInfo = {
 };
 
 // Seleccionar todos los rect y polygons con clase cls-11
-const lotes = document.querySelectorAll('.cls-11');
+const lotes = document.querySelectorAll('.cls-17');
 const infoBox = document.getElementById('lote-info');
+console.log(lotes);
+
 
 lotes.forEach(lote => {
     // Agregar clase según estado para colorear el fondo
@@ -56,9 +58,9 @@ lotes.forEach(lote => {
     }
 
     lote.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent click from bubbling up and hiding the popup immediately
         const id = lote.id;
         const info = lotesInfo[id];
-
         if (info) {
             // Construir el contenido del popup
             infoBox.innerHTML = `
@@ -70,8 +72,10 @@ lotes.forEach(lote => {
 
             // Posicionar el popup cerca del clic
             const rect = lote.getBoundingClientRect();
-            infoBox.style.left = `${e.clientX + 10}px`;
-            infoBox.style.top = `${e.clientY + 10}px`;
+            const scrollX = window.scrollX || window.pageXOffset;
+            const scrollY = window.scrollY || window.pageYOffset;
+            infoBox.style.left = `${rect.left + scrollX + 10}px`; // Offset from left edge of lote
+            infoBox.style.top = `${rect.top + scrollY + rect.height + 10}px`; // Below the lote
             infoBox.style.display = 'block';
         }
     });
@@ -79,7 +83,7 @@ lotes.forEach(lote => {
 
 // Ocultar el popup cuando se hace clic fuera
 document.addEventListener('click', (e) => {
-    if (!e.target.closest('.cls-11') && !e.target.closest('.lote-info')) {
+    if (!e.target.closest('.cls-17') && !e.target.closest('.lote-info')) {
         infoBox.style.display = 'none';
     }
 });
