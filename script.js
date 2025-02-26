@@ -1,4 +1,4 @@
-// Datos de ejemplo para los lotes (puedes personalizarlos según tus necesidades)
+// Datos de ejemplo para los lotes (sin cambios)
 const lotesInfo = {
     "_1": { numero: 1, area: "542.88 m²", estado: "Reservado", precio: "$32,500" },
     "_2": { numero: 2, area: "364.92 m²", estado: "Disponible", precio: "$22,500" },
@@ -43,14 +43,12 @@ const lotesInfo = {
     "_41": { numero: 41, area: "338.50 m²", estado: "Disponible", precio: "$20,500" }
 };
 
-// Seleccionar todos los rect y polygons con clase cls-11
+// Seleccionar todos los rect y polygons con clase cls-17
 const lotes = document.querySelectorAll('.cls-17');
 const infoBox = document.getElementById('lote-info');
-console.log(lotes);
 
-
+// Agregar clase según estado y manejar clics
 lotes.forEach(lote => {
-    // Agregar clase según estado para colorear el fondo
     const id = lote.id;
     if (lotesInfo[id]) {
         const estado = lotesInfo[id].estado.toLowerCase();
@@ -58,7 +56,7 @@ lotes.forEach(lote => {
     }
 
     lote.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevent click from bubbling up and hiding the popup immediately
+        e.stopPropagation();
         const id = lote.id;
         const info = lotesInfo[id];
         if (info) {
@@ -70,12 +68,26 @@ lotes.forEach(lote => {
                 <p><strong>Precio:</strong> ${info.precio}</p>
             `;
 
-            // Posicionar el popup cerca del clic
+            // Posicionar el popup
             const rect = lote.getBoundingClientRect();
             const scrollX = window.scrollX || window.pageXOffset;
             const scrollY = window.scrollY || window.pageYOffset;
-            infoBox.style.left = `${rect.left + scrollX + 10}px`; // Offset from left edge of lote
-            infoBox.style.top = `${rect.top + scrollY + rect.height + 10}px`; // Below the lote
+            const popupHeight = infoBox.offsetHeight || 150; // Altura estimada del popup
+            const windowHeight = window.innerHeight;
+
+            // Posición horizontal (a la derecha del lote)
+            infoBox.style.left = `${rect.left + scrollX + 10}px`;
+
+            // Decidir si el popup va arriba o abajo
+            const spaceBelow = windowHeight - rect.bottom; // Espacio debajo del lote
+            if (spaceBelow < popupHeight + 10 && rect.top > popupHeight + 10) {
+                // Si no hay espacio debajo pero sí arriba, posicionar arriba
+                infoBox.style.top = `${rect.top + scrollY - popupHeight - 10}px`;
+            } else {
+                // Por defecto, posicionar abajo
+                infoBox.style.top = `${rect.bottom + scrollY + 10}px`;
+            }
+
             infoBox.style.display = 'block';
         }
     });
@@ -83,7 +95,7 @@ lotes.forEach(lote => {
 
 // Ocultar el popup cuando se hace clic fuera
 document.addEventListener('click', (e) => {
-    if (!e.target.closest('.cls-17') && !e.target.closest('.lote-info')) {
+    if (!e.target.closest('.cls-17') && !e.target.closest('#lote-info')) {
         infoBox.style.display = 'none';
     }
 });
