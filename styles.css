@@ -1,34 +1,252 @@
-svg {
-    width: 100%;
-    height: 100vh;
-    /* display: block; */
-    /* margin: 0 auto; */
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    /* Fuente minimalista */
+    /* Fuente más moderna, descárgala si no la tienes */
+    display: flex;
+    /* height: 100vh; */
+    /* overflow: hidden; */
 }
 
-body {
-    font-family: Arial, sans-serif;
+
+.container {
+    display: flex;
+    width: 100%;
 }
 
 #map-container {
+    width: 100%;
+}
+
+/* Sección izquierda */
+.left-section {
+    width: 50%;
+    /* background-color: #f4f4f4; */
+    background: linear-gradient(to bottom, #f9f9f9, #e8ecef);
+    /* Gradiente sutil */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-#info {
-    margin-top: 20px;
-    padding: 10px;
-    border: 1px solid #000;
-    display: inline-block;
-    background: #fff;
+.left-section h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
 }
 
-#lot-map {
-    display: block;
-    margin: 0 auto;
+.left-section p {
+    font-size: 1.2em;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    max-width: 80%;
 }
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.features li {
+    font-size: 1.1em;
+    color: #34495e;
+    margin: 10px 0;
+}
+
+.btn {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* Sección derecha (plano interactivo) */
+.right-section {
+    width: 50%;
+    background-color: #ecf0f1;
+    /* Placeholder para el plano */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#Capa_2 {
+    width: 90%;
+    /* height: 100%; */
+}
+
 
 .cls-1 {
+    letter-spacing: -.08em;
+}
+
+.cls-2,
+.cls-3,
+.cls-4,
+.cls-5 {
+    font-family: CenturyGothic-Bold, 'Century Gothic';
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.cls-2,
+.cls-6 {
+    fill: #f97316;
+}
+
+.cls-7 {
+    letter-spacing: 0em;
+}
+
+.cls-3,
+.cls-8 {
+    fill: #10b981;
+}
+
+.cls-9 {
+    fill: #b3b3b3;
+    font-family: MyriadPro-Regular, 'Myriad Pro';
+    font-size: 24px;
+}
+
+.cls-4,
+.cls-10 {
+    fill: #9d174d;
+}
+
+.cls-11 {
+    fill: #fff;
+}
+
+.cls-12 {
+    letter-spacing: -.01em;
+}
+
+.cls-13 {
+    letter-spacing: -.02em;
+}
+
+.cls-5,
+.cls-14 {
+    fill: #eab308;
+}
+
+.cls-15 {
+    opacity: .21;
+}
+
+.cls-16 {
+    stroke: #ccc;
+}
+
+.cls-16 {
     fill: none;
-    stroke: #000;
     stroke-miterlimit: 10;
-    stroke-width: 0.5px;
+    stroke-width: 1.5px;
+    fill: #aecea0;
+
+}
+
+.cls-17 {
+    fill: transparent;
+    stroke: #b3b3b3;
+    stroke-miterlimit: 10;
+    stroke-width: .5px;
+}
+
+.cls-17:hover {
+    stroke: #000;
+    cursor: pointer;
+}
+
+/* Cambiar color de fondo del lote según estado */
+.cls-17.disponible {
+    fill: #ceecc1;
+}
+
+.cls-17.vendido {
+    fill: #f2dede;
+}
+
+.cls-17.reservado {
+    fill: #fff27e;
+}
+
+.cls-18 {
+    letter-spacing: 0em;
+}
+
+.cls-19 {
+    letter-spacing: 0em;
+}
+
+.cls-20 {
+    letter-spacing: 0em;
+}
+
+.cls-21 {
+    letter-spacing: 0em;
+}
+
+.cls-17 {
+    stroke: #b3b3b3;
+}
+
+.cls-22 {
+    letter-spacing: -.01em;
+}
+
+.cls-23 {
+    letter-spacing: 0em;
+}
+
+.cls-24 {
+    letter-spacing: -.03em;
+}
+
+#lote-info {
+    position: absolute;
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+}
+
+.disponible {
+    color: #27ae60;
+}
+
+.vendido {
+    color: #e74c3c;
+}
+
+.reservado {
+    color: #f39c12;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-section {
+        width: 100%;
+
+    }
 }

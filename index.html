@@ -4,136 +4,342 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plano Interactivo del Loteo</title>
+    <title>Altos del Oeste</title>
     <!-- Vinculamos el archivo CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div id="map-container">
-        <!-- <h2>Plano Interactivo del Loteo</h2> -->
-        <svg id="lot-map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 425">
-            <defs>
-                <style>
-                    .cls-1 {
-                        opacity: 0.21;
-                    }
+    <div class="container">
+        <!-- Sección izquierda -->
+        <div class="left-section">
+            <h1>Altos del Oeste</h1>
+            <p>Descubre un lugar único para construir tu hogar, rodeado de naturaleza y con todas las comodidades que
+                necesitas.</p>
+            <ul class="features">
+                <li>🌳 Lotes amplios desde 300 m²</li>
+                <li>🏊‍♂️ Amenities exclusivos</li>
+                <li>🛣️ Acceso pavimentado</li>
+            </ul>
+            <button class="btn" onclick="showMessage()">Más Información</button>
+        </div>
 
-                    .cls-2,
-                    .cls-3 {
-                        fill: #10b981;
-                    }
-
-                    .cls-3 {
-                        font-size: 13.52px;
-                        font-family: CenturyGothic-Bold, Century Gothic;
-                        font-weight: 700;
-                    }
-
-                    .cls-4 {
-                        fill: none;
-                        stroke: #000;
-                        stroke-miterlimit: 10;
-                    }
-
-                    /* Efecto hover para los lotes */
-                    .lot:hover {
-                        fill: rgba(16, 185, 129, 0.4);
-                        /* Cambia el color con transparencia */
-                        cursor: pointer;
-                    }
-
-                    /* Asegurar que los lotes no tengan relleno por defecto */
-                    .cls-4 {
-                        fill: transparent;
-                    }
-                </style>
-            </defs>
-            <g id="Capa_2" data-name="Capa 2">
+        <!-- Sección derecha (tu plano interactivo) -->
+        <div id="map-container">
+            <svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 896 1241">
                 <g id="Capa_1-2" data-name="Capa 1">
-                    <g id="_8" data-name="8">
-                        <g id="_Grupo_" data-name="&lt;Grupo&gt;" class="cls-1">
-                            <circle class="cls-2" cx="77.86" cy="389.93" r="12.95" />
-                        </g>
-                        <text class="cls-3" transform="translate(74.23 394.56)">8</text>
-                        <polygon id="_8-2" data-name="8" class="cls-4 lot"
-                            points="154.5 424.5 16.5 424.5 0.5 409.5 0.5 355.5 154.5 355.5 154.5 424.5" />
+
+                    <g id="calles">
+                        <line class="cls-16" x1="135" y1="376" x2="133" y2="157" />
+                        <line class="cls-16" x1="133" y1="53" x2="890" y2="53" />
+                        <rect class="cls-16" x="740" y="870" width="129" height="244" />
+
+                        <line class="cls-16" x1="133" y1="53" x2="133" />
+                        <line class="cls-16" x1="58" x2="58" y2="53" />
+                        <line class="cls-16" x1="58" y1="53" y2="53" />
+                        <line class="cls-16" x1="58" y1="157" x2="58" y2="914" />
+                        <line class="cls-16" x1="133" y1="157" x2="632" y2="157" />
+                        <line class="cls-16" y1="157" x2="58" y2="157" />
+                        <line class="cls-16" y1="991" x2="58" y2="991" />
+                        <line class="cls-16" x1="58" y1="914" y2="914" />
+                        <line class="cls-16" x1="134" y1="1241" x2="134" y2="1188" />
+                        <line class="cls-16" x1="58" y1="991" x2="58" y2="1241" />
+                        <line class="cls-16" x1="134" y1="1188" x2="896" y2="1188" />
+                        <!-- <line class="cls-16" x1="740" y1="870" x2="740" y2="1113" /> -->
+                        <line class="cls-16" x1="869" y1="870" x2="869" y2="1113" />
+                        <line class="cls-16" x1="740" y1="1113" x2="869" y2="1113" />
+                        <text class="cls-9" transform="translate(307.07 112.64)">
+                            <tspan class="cls-21" x="0" y="0">Calle SOLDADO ARGENTINO</tspan>
+
+                        </text>
+                        <text class="cls-9" transform="translate(308.41 627.01)">
+                            <tspan class="cls-21" x="0" y="0">Calle SOLDADO JURIO</tspan>
+                        </text>
+                        <text class="cls-9" transform="translate(691.6 777.74) rotate(90)">
+                            <tspan class="cls-21" x="0" y="0">Calle URUGUAY</tspan>
+                        </text>
+                        <text class="cls-9" transform="translate(89.17 478.15) rotate(90)">
+                            <tspan class="cls-13" x="0" y="0">Avda. RAMON HERNANDEZ</tspan>
+                        </text>
+                        <text class="cls-9" transform="translate(306.23 1162.69)">
+                            <tspan class="cls-21" x="0" y="0">Calle SOLDADO SORIANO</tspan>
+                        </text>
                     </g>
-                    <g id="_9" data-name="9">
-                        <g id="_Grupo_2" data-name="&lt;Grupo&gt;" class="cls-1">
-                            <circle class="cls-2" cx="77.38" cy="321.32" r="12.95" />
+                    <g id="D">
+                        <g id="_33" data-name="33">
+                            <rect id="_33" class="cls-17" x="740" y="809" width="129" height="61" />
+                            <text class="cls-4" transform="translate(796.87 843.66)">
+                                <tspan x="0" y="0">33</tspan>
+                            </text>
                         </g>
-                        <text class="cls-3" transform="translate(73.75 325.95)">9</text>
-                        <rect id="_9-2" data-name="9" class="cls-4 lot" x="0.5" y="287.5" width="154" height="68" />
+                        <g id="_34" data-name="34">
+                            <rect id="_34" class="cls-17" x="740" y="657" width="64" height="152" />
+                            <text class="cls-4" transform="translate(764.87 737.66)">
+                                <tspan x="0" y="0">34</tspan>
+                            </text>
+                        </g>
+                        <g id="_35" data-name="35">
+                            <rect id="_35" class="cls-17" x="804" y="657" width="65" height="152" />
+                            <text class="cls-4" transform="translate(828.87 737.66)">
+                                <tspan x="0" y="0">35</tspan>
+                            </text>
+                        </g>
+                        <circle class="cls-10" cx="743.45" cy="654.9" r="21" />
+                        <path class="cls-11"
+                            d="M738.42,646.82h3.79c2.44,0,4.25.3,5.44.91s2.16,1.59,2.93,2.95,1.15,2.95,1.15,4.77c0,1.29-.21,2.48-.64,3.57-.43,1.08-1.02,1.98-1.78,2.7s-1.58,1.21-2.46,1.48c-.88.27-2.41.41-4.59.41h-3.84v-16.79ZM741.6,649.9v10.59h1.48c1.46,0,2.52-.17,3.18-.5.66-.34,1.2-.9,1.62-1.69.42-.79.63-1.77.63-2.93,0-1.78-.5-3.17-1.5-4.15-.9-.88-2.34-1.33-4.33-1.33h-1.08Z" />
                     </g>
-                    <g id="_10" data-name="10">
-                        <g class="cls-1">
-                            <circle class="cls-2" cx="77.38" cy="253.61" r="12.95" />
+                    <g id="C">
+                        <g id="_36" data-name="36">
+                            <polygon id="_36" class="cls-17" points="869 579 744 579 744 509 872 509 869 579" />
+                            <text class="cls-5" transform="translate(799.96 550.34)">
+                                <tspan x="0" y="0">36</tspan>
+                            </text>
                         </g>
-                        <text class="cls-3" transform="translate(69.75 258.23)">10</text>
-                        <rect id="_10-2" data-name="10" class="cls-4 lot" x="0.5" y="219.5" width="154" height="68" />
+                        <g id="_37" data-name="37">
+                            <rect id="_37" class="cls-17" x="744" y="439" width="128" height="70" />
+                            <text class="cls-5" transform="translate(800.39 478.63)">
+                                <tspan x="0" y="0">37</tspan>
+                            </text>
+                        </g>
+                        <g id="_38" data-name="38">
+                            <rect id="_38" class="cls-17" x="744" y="368" width="128" height="71" />
+                            <text class="cls-5" transform="translate(800.39 408.48)">
+                                <tspan x="0" y="0">38</tspan>
+                            </text>
+                        </g>
+                        <g id="_39" data-name="39">
+                            <rect id="_39" class="cls-17" x="744" y="297" width="128" height="71" />
+                            <text class="cls-5" transform="translate(800.39 337.2)">
+                                <tspan x="0" y="0">39</tspan>
+                            </text>
+                        </g>
+                        <g id="_40" data-name="40">
+                            <rect id="_40" class="cls-17" x="743.5" y="226.5" width="128" height="70" />
+                            <text class="cls-5" transform="translate(800.39 265.77)">
+                                <tspan x="0" y="0">40</tspan>
+                            </text>
+                        </g>
+                        <g id="_41" data-name="41">
+                            <polygon id="_41" class="cls-17" points="872 157 759 156 744 171 744 226 872 226 872 157" />
+                            <text class="cls-5" transform="translate(800.39 198.77)">
+                                <tspan x="0" y="0">41</tspan>
+                            </text>
+                        </g>
+                        <circle class="cls-14" cx="743.15" cy="368.54" r="20.75" />
+                        <path class="cls-11"
+                            d="M751.81,362.67l-2.26,2.16c-1.54-1.63-3.27-2.44-5.19-2.44-1.62,0-2.99.56-4.1,1.67s-1.67,2.48-1.67,4.11c0,1.13.25,2.14.74,3.02.49.88,1.19,1.57,2.09,2.07.9.5,1.9.75,3,.75.94,0,1.8-.18,2.57-.53.78-.35,1.63-.99,2.56-1.91l2.19,2.29c-1.26,1.23-2.44,2.07-3.56,2.55-1.12.47-2.39.71-3.82.71-2.64,0-4.8-.84-6.49-2.51-1.68-1.68-2.52-3.82-2.52-6.44,0-1.69.38-3.2,1.15-4.52.77-1.32,1.86-2.38,3.29-3.18,1.43-.8,2.97-1.2,4.62-1.2,1.4,0,2.75.3,4.05.89,1.3.59,2.42,1.43,3.36,2.53Z" />
                     </g>
-                    <g id="_13" data-name="13">
-                        <g class="cls-1">
-                            <circle class="cls-2" cx="184.99" cy="321.14" r="12.95" />
+                    <g id="B">
+                        <g id="_1" data-name="1">
+                            <polygon id="_1" class="cls-17"
+                                points="134.03 1021.41 288.03 1021.41 288.03 1113 149 1113 134 1098 134.03 1021.41" />
+                            <text class="cls-2" transform="translate(207.44 1069.07)">
+                                <tspan x="0" y="0">1</tspan>
+                            </text>
                         </g>
-                        <text class="cls-3" transform="translate(177.36 325.77)">13</text>
-                        <rect id="_13-2" data-name="13" class="cls-4 lot" x="154.5" y="219.5" width="60" height="205" />
+                        <g id="_2" data-name="2">
+                            <rect id="_2" class="cls-17" x="134.03" y="961.02" width="154" height="60.83" />
+                            <text class="cls-2" transform="translate(207.3 995.79)">
+                                <tspan x="0" y="0">2</tspan>
+                            </text>
+                        </g>
+                        <g id="_3" data-name="3">
+                            <rect id="_3" class="cls-17" x="134.03" y="900.19" width="154" height="60.83" />
+                            <text class="cls-2" transform="translate(208.16 935)">
+                                <tspan x="0" y="0">3</tspan>
+                            </text>
+                        </g>
+                        <g id="_4" data-name="4">
+                            <rect id="_4" class="cls-17" x="134.03" y="839.36" width="154" height="60.83" />
+                            <text class="cls-2" transform="translate(207.16 875.14)">
+                                <tspan x="0" y="0">4</tspan>
+                            </text>
+                        </g>
+                        <g id="_5" data-name="5">
+                            <rect id="_5" class="cls-17" x="134" y="778.67" width="154" height="60.83" />
+                            <text class="cls-2" transform="translate(207.87 813.57)">
+                                <tspan x="0" y="0">5</tspan>
+                            </text>
+                        </g>
+                        <g id="_6" data-name="6">
+                            <rect id="_6" class="cls-17" x="134" y="717.83" width="154" height="60.83" />
+                            <text class="cls-2" transform="translate(207.87 753)">
+                                <tspan x="0" y="0">6</tspan>
+                            </text>
+                        </g>
+                        <g id="_7" data-name="7">
+                            <polygon id="_7" class="cls-17"
+                                points="134 672 149.44 657 288 657 288 717.83 134 717.83 134 672" />
+                            <text class="cls-2" transform="translate(207.87 692)">
+                                <tspan x="0" y="0">7</tspan>
+                            </text>
+                        </g>
+                        <g id="_11" data-name="11">
+                            <rect id="_11" class="cls-17" x="288" y="887" width="60" height="226" />
+                            <text class="cls-2" transform="translate(312.16 995.93)">
+                                <tspan x="0" y="0">11</tspan>
+                            </text>
+                        </g>
+                        <g id="_12" data-name="12">
+                            <rect id="_12" class="cls-17" x="288" y="657" width="60" height="229.5" />
+                            <text class="cls-2" transform="translate(311.13 782.5)">
+                                <tspan x="0" y="0">12</tspan>
+                            </text>
+                        </g>
+                        <g id="_14" data-name="14">
+                            <rect id="_14" class="cls-17" x="348" y="887" width="60" height="226" />
+                            <text class="cls-2" transform="translate(371.56 996.07)">
+                                <tspan x="0" y="0">14</tspan>
+                            </text>
+                        </g>
+                        <g id="_15" data-name="15">
+                            <rect id="_15" class="cls-17" x="348" y="657" width="60" height="229.5" />
+                            <text class="cls-2" transform="translate(371.06 782.07)">
+                                <tspan x="0" y="0">15</tspan>
+                            </text>
+                        </g>
+                        <g id="_17" data-name="17">
+                            <rect id="_17" class="cls-17" x="408" y="887" width="60" height="226" />
+                            <text class="cls-2" transform="translate(431.13 995.93)">
+                                <tspan x="0" y="0">17</tspan>
+                            </text>
+                        </g>
+                        <g id="_18" data-name="18">
+                            <rect id="_18" class="cls-17" x="408" y="657" width="60" height="229.5" />
+                            <text class="cls-2" transform="translate(430.63 781.93)">
+                                <tspan x="0" y="0">18</tspan>
+                            </text>
+                        </g>
+                        <g id="_20" data-name="20">
+                            <rect id="_20" class="cls-17" x="468" y="977" width="61" height="136" />
+                            <text class="cls-2" transform="translate(491.27 1048.07)">
+                                <tspan x="0" y="0">20</tspan>
+                            </text>
+                        </g>
+                        <g id="_21" data-name="21">
+                            <rect id="_21" class="cls-17" x="468" y="657" width="62" height="137" />
+                            <text class="cls-2" transform="translate(491.27 728.07)">
+                                <tspan x="0" y="0">21</tspan>
+                            </text>
+                        </g>
+                        <g id="_23" data-name="23">
+                            <rect id="_23" class="cls-17" x="529" y="977" width="60" height="136" />
+                            <text class="cls-2" transform="translate(553.27 1048.07)">
+                                <tspan x="0" y="0">23</tspan>
+                            </text>
+                        </g>
+                        <g id="_24" data-name="24">
+                            <rect id="_24" class="cls-17" x="530" y="657" width="62" height="137" />
+                            <text class="cls-2" transform="translate(553.27 728.07)">
+                                <tspan x="0" y="0">24</tspan>
+                            </text>
+                        </g>
+                        <g id="_25" data-name="25">
+                            <rect id="_25" class="cls-17" x="589" y="977" width="63" height="136" />
+                            <text class="cls-2" transform="translate(613.27 1048.07)">
+                                <tspan x="0" y="0">25</tspan>
+                            </text>
+                        </g>
+                        <g id="_26" data-name="26">
+                            <rect id="_26" class="cls-17" x="468" y="916" width="184" height="61" />
+                            <text class="cls-2" transform="translate(553.27 949.07)">
+                                <tspan x="0" y="0">26</tspan>
+                            </text>
+                        </g>
+                        <g id="_27" data-name="27">
+                            <rect id="_27" class="cls-17" x="468" y="855" width="184" height="61" />
+                            <text class="cls-2" transform="translate(553.27 889.07)">
+                                <tspan x="0" y="0">27</tspan>
+                            </text>
+                        </g>
+                        <g id="_28" data-name="28">
+                            <rect id="_28" class="cls-17" x="468" y="794" width="184" height="61" />
+                            <text class="cls-2" transform="translate(553.27 829.07)">
+                                <tspan x="0" y="0">28</tspan>
+                            </text>
+                        </g>
+                        <g id="_29" data-name="29">
+                            <rect id="_29" class="cls-17" x="592" y="657" width="60" height="137" />
+                            <text class="cls-2" transform="translate(614.27 728.07)">
+                                <tspan x="0" y="0">29</tspan>
+                            </text>
+                        </g>
+                        <circle class="cls-6" cx="409.25" cy="657.25" r="20.75" />
+                        <path class="cls-11"
+                            d="M405.02,664.96v-16.79h2.64c1.53,0,2.65.1,3.36.3,1.01.27,1.81.76,2.4,1.48.59.72.89,1.58.89,2.56,0,.64-.14,1.22-.41,1.74-.27.52-.71,1.01-1.32,1.47,1.02.48,1.77,1.08,2.24,1.8.47.72.71,1.57.71,2.55s-.24,1.8-.73,2.58-1.12,1.36-1.89,1.74-1.83.58-3.19.58h-4.71ZM408.21,651.22v3.54h.7c.78,0,1.36-.16,1.74-.49.38-.33.57-.77.57-1.34,0-.53-.18-.94-.54-1.25-.36-.31-.91-.46-1.64-.46h-.83ZM408.21,657.61v4.3h.8c1.33,0,2.22-.17,2.68-.50.46-.34.69-.82.69-1.46,0-.72-.27-1.29-.81-1.71s-1.44-.63-2.7-.63h-.66Z" />
                     </g>
-                    <g id="_16" data-name="16">
-                        <g class="cls-1">
-                            <circle class="cls-2" cx="244.99" cy="321.14" r="12.95" />
+                    <g id="A">
+                        <g id="_8" data-name="8">
+                            <polygon id="_8" class="cls-17" points="289 581 151 581 135 566 135 512 289 512 289 581" />
+                            <text class="cls-3" transform="translate(208.73 551.06)">
+                                <tspan x="0" y="0">8</tspan>
+                            </text>
                         </g>
-                        <text class="cls-3" transform="translate(237.36 325.77)">16</text>
-                        <rect id="_16-2" data-name="16" class="cls-4 lot" x="214.5" y="219.5" width="60" height="205" />
-                    </g>
-                    <g id="_19" data-name="19">
-                        <g class="cls-1">
-                            <circle class="cls-2" cx="304.99" cy="320.14" r="12.95" />
+                        <g id="_9" data-name="9">
+                            <rect id="_9" class="cls-17" x="135" y="444" width="154" height="68" />
+                            <text class="cls-3" transform="translate(208.25 482.45)">
+                                <tspan x="0" y="0">9</tspan>
+                            </text>
                         </g>
-                        <text class="cls-3" transform="translate(297.36 324.77)">19</text>
-                        <rect id="_19-2" data-name="19" class="cls-4 lot" x="274.5" y="219.5" width="60" height="205" />
-                    </g>
-                    <g id="_22" data-name="22">
-                        <g class="cls-1">
-                            <circle class="cls-2" cx="364.99" cy="321.14" r="12.95" />
+                        <g id="_10" data-name="10">
+                            <rect id="_10" class="cls-17" x="135" y="376" width="154" height="68" />
+                            <text class="cls-3" transform="translate(204.25 414.73)">
+                                <tspan x="0" y="0">10</tspan>
+                            </text>
                         </g>
-                        <text class="cls-3" transform="translate(357.36 325.77)">22</text>
-                        <rect id="_22-2" data-name="22" class="cls-4 lot" x="334.5" y="219.5" width="60" height="205" />
-                    </g>
-                    <g id="_30" data-name="30">
-                        <g class="cls-1">
-                            <circle class="cls-2" cx="456.7" cy="390.29" r="12.95" />
+                        <g id="_13" data-name="13">
+                            <rect id="_13" class="cls-17" x="289" y="376" width="60" height="205" />
+                            <text class="cls-3" transform="translate(311.86 482.27)">
+                                <tspan x="0" y="0">13</tspan>
+                            </text>
                         </g>
-                        <text class="cls-3" transform="translate(449.08 394.91)">30</text>
-                        <polygon id="_30-2" data-name="30" class="cls-4 lot"
-                            points="519.5 407.5 501.5 424.5 394.5 424.5 394.5 354.5 519.5 354.5 519.5 407.5" />
-                    </g>
-                    <g id="_31" data-name="31">
-                        <g class="cls-1">
-                            <circle class="cls-2" cx="456.56" cy="321.57" r="12.95" />
+                        <g id="_16" data-name="16">
+                            <rect id="_16" class="cls-17" x="349" y="376" width="60" height="205" />
+                            <text class="cls-3" transform="translate(371.86 482.27)">
+                                <tspan x="0" y="0">16</tspan>
+                            </text>
                         </g>
-                        <text class="cls-3" transform="translate(448.93 326.2)">31</text>
-                        <rect id="_31-2" data-name="31" class="cls-4 lot" x="394.5" y="286.5" width="125" height="68" />
-                    </g>
-                    <g id="_32" data-name="32">
-                        <g class="cls-1">
-                            <circle class="cls-2" cx="456.56" cy="253.57" r="12.95" />
+                        <g id="_19" data-name="19">
+                            <rect id="_19" class="cls-17" x="409" y="376" width="60" height="205" />
+                            <text class="cls-3" transform="translate(431.86 481.27)">
+                                <tspan x="0" y="0">19</tspan>
+                            </text>
                         </g>
-                        <text class="cls-3" transform="translate(448.93 258.2)">32</text>
-                        <polygon id="_32-2" data-name="32" class="cls-4 lot"
-                            points="519.5 0.5 497.5 0.5 498.5 219.5 394.5 219.5 394.5 286.5 519.5 286.5 519.5 0.5" />
+                        <g id="_22" data-name="22">
+                            <rect id="_22" class="cls-17" x="469" y="376" width="60" height="205" />
+                            <text class="cls-3" transform="translate(491.86 482.27)">
+                                <tspan x="0" y="0">22</tspan>
+                            </text>
+                        </g>
+                        <g id="_30" data-name="30">
+                            <polygon id="_30" class="cls-17" points="654 564 636 581 529 581 529 511 654 511 654 564" />
+                            <text class="cls-3" transform="translate(583.58 551.41)">
+                                <tspan x="0" y="0">30</tspan>
+                            </text>
+                        </g>
+                        <g id="_31" data-name="31">
+                            <rect id="_31" class="cls-17" x="529" y="443" width="125" height="68" />
+                            <text class="cls-3" transform="translate(583.43 482.7)">
+                                <tspan x="0" y="0">31</tspan>
+                            </text>
+                        </g>
+                        <g id="_32" data-name="32">
+                            <polygon id="_32" class="cls-17"
+                                points="654 157 632 157 633 376 529 376 529 443 654 443 654 157" />
+                            <text class="cls-3" transform="translate(583.43 414.7)">
+                                <tspan x="0" y="0">32</tspan>
+                            </text>
+                        </g>
+                        <circle class="cls-8" cx="408.79" cy="376.43" r="20.75" />
+                        <path class="cls-11"
+                            d="M407.48,366.98h3.24l6.46,16.79h-3.32l-1.31-3.46h-6.85l-1.37,3.46h-3.32l6.48-16.79ZM409.12,371.44l-2.25,5.77h4.49l-2.24-5.77Z" />
                     </g>
                 </g>
-            </g>
-        </svg>
-
-
-
+            </svg>
+        </div>
     </div>
-    <div id="info">
-        <p>Haz clic en los lotes para ver información.</p>
-    </div>
+
+    <div id="lote-info" class="lote-info"></div>
 
     <!-- Vinculamos el archivo JS -->
     <script src="script.js"></script>
