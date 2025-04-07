@@ -72,11 +72,20 @@ lotes.forEach(lote => {
             const rect = lote.getBoundingClientRect();
             const scrollX = window.scrollX || window.pageXOffset;
             const scrollY = window.scrollY || window.pageYOffset;
+            const popupWidth = infoBox.offsetWidth || 200; // Ancho estimado del popup
             const popupHeight = infoBox.offsetHeight || 150; // Altura estimada del popup
+            const windowWidth = window.innerWidth;
             const windowHeight = window.innerHeight;
 
-            // Posición horizontal (a la derecha del lote)
-            infoBox.style.left = `${rect.left + scrollX + 10}px`;
+            // Decidir si posicionar a la izquierda o derecha
+            const spaceRight = windowWidth - rect.right; // Espacio a la derecha del lote
+            if (spaceRight < popupWidth + 10 && rect.left > popupWidth + 10) {
+                // Si no hay espacio a la derecha pero sí a la izquierda, posicionar a la izquierda
+                infoBox.style.left = `${rect.left + scrollX - popupWidth - 10}px`;
+            } else {
+                // Por defecto, posicionar a la derecha
+                infoBox.style.left = `${rect.right + scrollX + 10}px`;
+            }
 
             // Decidir si el popup va arriba o abajo
             const spaceBelow = windowHeight - rect.bottom; // Espacio debajo del lote
