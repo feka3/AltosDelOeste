@@ -39,8 +39,8 @@ const lotesInfo = {
     "_37": { numero: 37, area: "343 m²", estado: "Disponible", precio: "$15,500" },
     "_38": { numero: 38, area: "343 m²", estado: "Disponible", precio: "$15,500" },
     "_39": { numero: 39, area: "343 m²", estado: "Disponible", precio: "$15,500" },
-    "_40": { numero: 40, area: "343 m²", estado: "Disponible", precio: "$15,500" },
-    "_41": { numero: 41, area: "338.50 m²", estado: "Disponible", precio: "$20,500" }
+    "_40": { numero: 40, area: "343 m²", estado: "Vendido", precio: "$15,500" },
+    "_41": { numero: 41, area: "338.50 m²", estado: "Vendido", precio: "$20,500" }
 };
 
 // Seleccionar todos los rect y polygons con clase cls-17
